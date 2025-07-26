@@ -20,7 +20,7 @@ export default function personalDetails({data, onChange}) {
             <input 
                 type="tel"
                 placeholder="phone number"
-                value={data.number || ""}
+                value={data.phone || ""}
                 onChange={(e) => onChange({...data, number: e.target.value})}
                 className="block w-full p-2 mb-2 border rounded" 
             />
