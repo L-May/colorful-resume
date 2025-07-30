@@ -12,8 +12,8 @@ export default function personalDetails({data, onChange}) {
             <input
                 type="text"
                 placeholder="Where are you located?"
-                value={data.location || ""}
-                onChange={(e) => onChange({...data, location: e.target.value})}
+                value={data.based || ""}
+                onChange={(e) => onChange({...data, based: e.target.value})}
                 className="block w-full p-2 mb-2 border rounded"
             />
 
@@ -21,7 +21,7 @@ export default function personalDetails({data, onChange}) {
                 type="tel"
                 placeholder="phone number"
                 value={data.phone || ""}
-                onChange={(e) => onChange({...data, number: e.target.value})}
+                onChange={(e) => onChange({...data, phone: e.target.value})}
                 className="block w-full p-2 mb-2 border rounded" 
             />
 

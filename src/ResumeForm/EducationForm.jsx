@@ -1,28 +1,48 @@
 export default function EducationForm({ data, onChange }) {
-    function handleDelete(){
-        
-    }
+    const addEntry = () => {
+        onChange([
+            ...data,
+            {
+                degree: "",
+                school: "",
+                years: "",
+                description: "",
+            },
+        ]);
+    };
+
+    const removeEntry = (indexToRemove) => {
+        const newData = data.filter((_, index) => index != indexToRemove);
+        onChange(newData);
+    };
+
   return (
     <div>
-    {data.length === 0 && <p>No education added yet.</p> && <button
-                onClick={() => onChange([...data, { degree: "", school: "", years: "", description: "" }])}
+    {data.length === 0 && (
+        <div>
+            <p className="italic text-sm text-gray-500">No education added yet.</p>
+            <button
+                onClick={addEntry}
                 className="p-2 mt-2 text-sm text-white bg-pink-500 rounded"
-                >
+            >
                 + Add Education
-            </button>}
+            </button>
+        </div>
+    )}
+
     {data.map((entry, index) => (
         <div key={index} className="mb-4">
             <input
-            type="text"
-            placeholder="degree"
-            value={entry.degree || ""}
-            onChange={(e) => {
-                const newData = [...data]
-                newData[index].degree = e.target.value
-                onChange(newData)
+                type="text"
+                placeholder="degree"
+                value={entry.degree || ""}
+                onChange={(e) => {
+                    const newData = [...data]
+                    newData[index].degree = e.target.value
+                    onChange(newData)
             }}
             className="block w-full p-2 mb-1 border rounded"
-            />
+        />
 
             <input
             type="text"
@@ -58,15 +78,20 @@ export default function EducationForm({ data, onChange }) {
                 }}
                 className="block w-full p-2 mb-1 border rounded"
             />
-
-            <button
-                onClick={() => onChange([...data, { degree: "", school: "", years: "", description: "" }])}
-                className="p-2 mt-2 text-sm text-white bg-pink-500 rounded"
+            <div className="flex items-center gap-3 mt-2">
+                <button
+                    onClick={addEntry}
+                    className="p-2 mt-2 text-sm text-white bg-pink-500 rounded"
                 >
-                + Add Education
-            </button>
-            <button
-                onClick={handleDelete}
+                    + Add More
+                </button>
+                <button
+                    onClick={() => removeEntry(index)}
+                    className="text-sm px-2 py-1 text-red-500 hover:text-red-700"
+                >
+                    Remove
+                </button>
+            </div>
 
         </div>
 ))}
