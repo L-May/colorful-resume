@@ -1,4 +1,4 @@
-# Cottagecore Resume Builder
+# Colorful Resume Builder
 
 A clean and user-friendly React app to create and preview your resume with a colorful twist.
 
