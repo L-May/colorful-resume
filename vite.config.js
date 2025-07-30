@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/colorful-resume/'
+  base: '/colorful-resume/',
   plugins: [react(), tailwindcss()],
 })
