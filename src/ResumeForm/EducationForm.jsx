@@ -1,4 +1,7 @@
 export default function EducationForm({ data, onChange }) {
+    function handleDelete(){
+        
+    }
   return (
     <div>
     {data.length === 0 && <p>No education added yet.</p> && <button
@@ -45,8 +48,7 @@ export default function EducationForm({ data, onChange }) {
             className="block w-full p-2 mb-1 border rounded"
             />
 
-            <input 
-                type="text-area"
+            <textarea
                 placeholder="Description or achievements"
                 value={entry.description || ""}
                 onChange={(e) => {
@@ -63,6 +65,8 @@ export default function EducationForm({ data, onChange }) {
                 >
                 + Add Education
             </button>
+            <button
+                onClick={handleDelete}
 
         </div>
 ))}

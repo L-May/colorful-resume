@@ -45,8 +45,7 @@ export default function ExperienceForm({ data, onChange }) {
                     className="block w-full p-2 mb-1 border rounded"
                 />
 
-                <input 
-                    type="text-area"
+                <textarea
                     placeholder="Editing blog posts for posting..."
                     value={entry.jobDescription || ""}
                     onChange={(e) => {
