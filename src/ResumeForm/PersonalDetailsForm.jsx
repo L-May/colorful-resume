@@ -6,7 +6,7 @@ export default function personalDetails({data, onChange}) {
                 placeholder="First and last name"
                 value={data.name || ""} 
                 onChange={(e) => onChange({...data, name: e.target.value})}
-                className="block w-full p-2 mb-2 border-rounded"
+                className="block w-full p-2 mb-2 border rounded"
             />
 
             <input
