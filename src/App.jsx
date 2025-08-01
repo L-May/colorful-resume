@@ -19,7 +19,7 @@ export default function App() {
   const currentTheme = themes[theme];
 
   const handlePrint = useReactToPrint({
-    content: () => resumeRef.current,
+    contentRef: resumeRef,
     documentTitle: "My Resume",
   });
 
