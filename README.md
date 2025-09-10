@@ -1,17 +1,18 @@
 # Colorful Resume Builder
 
-A clean and user-friendly React app to create and preview your resume with a colorful twist.
+A React + TailwindCSS project where users can create and style a resume.
 
 ## Features
+- Add and edit resume sections (name, work experience, education)
+- Choose colors for styling
+- Option to export resume as a PDF
 
-- Input personal details, education, and work experience.
-- Select from cute colored themes.
-- Live resume preview.
-- Print or save your resume as PDF.
+## Challenges & Learnings
+I struggled with adding a **“Print to PDF”** feature. It pushed me to learn about different React libraries and browser APIs for handling PDF generation.
 
-## Technologies Used
-
+## Tech Used
 - React
+- TailwindCSS
+- JavaScript
 - Vite
-- Tailwind CSS
 - React-to-print
